@@ -2,6 +2,12 @@
 
 A simple Node.js Express API that connects to a MongoDB database and retrieves user data with age restrictions.
 
+## Approach explanation
+
+When approaching this project, I focused on creating a clean, maintainable structure that properly handles errors and edge cases. Instead of filtering users by age in the application code, I built the age requirement directly into the database query. This makes the API more efficient by only transferring data that meets our requirements.
+
+I also put special attention into error handling—making sure invalid IDs get helpful error messages while keeping the actual reason a user might not be returned (whether they don't exist or are underage) intentionally vague for security purposes. The result is an API that's both efficient and secure.
+
 ## Features
 
 - GET endpoint at /users/:id to retrieve user details
